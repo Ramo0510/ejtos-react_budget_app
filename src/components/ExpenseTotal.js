@@ -18,6 +18,8 @@ const ExpenseTotal = () => {
         return (total += item.cost);
     }, 0);
 
+    
+
     return (
         <div className='d-flex justify-content-between'>
 
@@ -34,15 +36,14 @@ const ExpenseTotal = () => {
             
             <span style={{color:'turquoise'}}>{selectedCurrency}</span>
 
-        <select value={selectedCurrency} onChange={handleCurrencyChange} style={{ position: 'absolute', top: 0, left: '0px', width: '100px', height: '100%', opacity: 0, cursor: 'pointer', fontSize: '16px', padding: '8px', backgroundColor: '#f8d7da', color: 'black', border:'none', }}>
+        <select value={selectedCurrency} onChange={handleCurrencyChange} style={{ position: 'absolute', top: 0, left: '0px', width: '100px', height: '100%', opacity: 0, cursor: 'pointer', fontSize: '16px', padding: '8px', backgroundColor: 'turquoise', color: 'black', borerRadius: '4px' }}>
           <option value="$">$ Dollar</option>
           <option value="£">£ Pound</option>
           <option value="€">€ Euro</option>
           <option value="₹">₹ Rupee</option>
         </select>
-    
 
-      </div>
+           </div>
             
             </div>
             
