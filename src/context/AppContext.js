@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useState } from 'react';
+import React, { createContext, useReducer } from 'react';
 
 // 5. The reducer - this is used to update the state, based on the action
 export const AppReducer = (state, action) => {
@@ -95,8 +95,6 @@ export const AppContext = createContext();
 // 3. Provider component - wraps the components we want to give access to the state
 // Accepts the children, which are the nested(wrapped) components
 export const AppProvider = (props) => {
-
-    const [selectedCurrency, setSelectedCurrency] = useState('£');
     
     // 4. Sets up the app state. takes a reducer, and an initial state
     const [state, dispatch] = useReducer(AppReducer, initialState);
@@ -118,8 +116,6 @@ export const AppProvider = (props) => {
                 remaining: remaining,
                 dispatch,
                 currency: state.currency,
-                selectedCurrency,
-                setSelectedCurrency,
             }}
         >
             {props.children}

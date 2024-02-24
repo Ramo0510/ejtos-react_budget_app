@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const ExpenseTotal = () => {
-    const { expenses, currency, dispatch } = useContext(AppContext);
-    const [selectedCurrency, setSelectedCurrency] = useState(currency);
+    const { expenses, dispatch } = useContext(AppContext);
+    const [selectedCurrency, setSelectedCurrency] = useState('£');
 
     const handleCurrencyChange = (event) => {
         const newCurrency = event.target.value;
