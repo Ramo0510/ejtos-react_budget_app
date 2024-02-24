@@ -25,10 +25,10 @@ const ExpenseTotal = () => {
             <span>Spent so far: {selectedCurrency} {totalExpenses}</span>
             </div>
 
-            <div className="currency-dropdown" style={{ width: '250px', height: '60px', fontSize: '16px', backgroundColor: '#f8d7da', color: '#721c24', marginLeft: '10px', borderRadius: '4px', paddingTop: '14px'}}>
+            <div className="currency-dropdown" style={{ width: '250px', height: '60px', fontSize: '16px', backgroundColor: '#f8d7da', color: '#721c24', marginLeft: '10px', borderRadius: '6px', paddingTop: '14px'}}>
             
-            <label style={{ marginLeft: '1rem' }}>Currency:</label>
-            <select value={selectedCurrency} onChange={handleCurrencyChange} style={{ marginLeft: '0.5rem' }}>
+            <label style={{ marginLeft: '1rem' }}>Currency</label>
+            <select value={selectedCurrency} onChange={handleCurrencyChange} style={{ marginLeft: '0.5rem', fontSize: '16px', padding: '8px', backgroundColor: '#f8d7da', color: 'white' }}>
                 <option value="$">Dollar</option>
                 <option value="£">Pound</option>
                 <option value="€">Euro</option>
